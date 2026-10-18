@@ -1,0 +1,40 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-company-locations",
+  "title": "LinkedIn Company Locations and Addresses",
+  "description": "LinkedIn company locations and office addresses from a company URL. Each office includes the address lines and whether it is the primary office. You supply the URL. No login. Starting from $0.45 per 1,000 companies. No LinkedIn login and no cookies.",
+  "seoTitle": "LinkedIn Company Office Locations by URL",
+  "seoDescription": "LinkedIn company locations and office addresses from a company URL. Address lines and the primary office. No login. Starting from $0.45 per 1,000 companies.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA",
+    "AUTOMATION"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "ACTOR_SLICE": "locations",
+    "CHARGE_EVENT": "company-locations",
+    "COMPANY_API_BASE_URL": "http://company-lockup.34.166.92.24.sslip.io",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
